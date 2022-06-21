@@ -13,11 +13,14 @@ public class LightMovement : MonoBehaviour
 	[SerializeField] bool isRight = false;
 	[SerializeField] bool isLeft = false;
 
+	public GameObject playerDeadPanel;
+
 	Vector3 startPosition = Vector3.zero;
 
 	private void Awake()
 	{
 		startPosition = transform.position;
+		playerDeadPanel.SetActive(false);
 	}
 
 
@@ -54,7 +57,7 @@ public class LightMovement : MonoBehaviour
 		if(collision.TryGetComponent(out PlayerController player))
 		{
 			IsPlayerTouchingLight(true);
-			Debug.Log( "Player Dead");
+			playerDeadPanel.SetActive(true);
 		}
 	}
 
