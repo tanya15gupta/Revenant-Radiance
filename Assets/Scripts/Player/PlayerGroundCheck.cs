@@ -6,11 +6,13 @@ public class PlayerGroundCheck : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		isGrounded = true;
+		if(!collision.GetComponent<LightMovement>())
+			isGrounded = true;
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		isGrounded = false;
+		if (!collision.GetComponent<LightMovement>())
+			isGrounded = false;
 	}
 }
