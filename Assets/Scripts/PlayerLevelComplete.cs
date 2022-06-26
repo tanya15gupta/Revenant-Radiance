@@ -16,6 +16,5 @@ public class PlayerLevelComplete : MonoBehaviour
 		if (collision.GetComponent<PlayerController>())
 			doorAnimation.SetBool("Door", true);
 		gameWinPanel.SetActive(true);
-
 	}
 }
