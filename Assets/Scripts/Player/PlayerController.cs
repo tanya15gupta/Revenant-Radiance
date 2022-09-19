@@ -8,12 +8,13 @@ public class PlayerController : MonoBehaviour
 	float horizontalInput;
 
 	public PlayerGroundCheck groundCheck;
-
+	public bool isKeyPresent;
 	bool isJumping;
 	Rigidbody2D playerRigidBody;
 
 	private void Awake()
 	{
+		isKeyPresent = false;
 		this.gameObject.SetActive(true);
 	}
 
@@ -37,6 +38,15 @@ public class PlayerController : MonoBehaviour
 	{
 		HorizontalCharacterMovement(horizontalInput);
 		PlayerJump();
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if(collision.gameObject.CompareTag("Key"))
+		{
+			Destroy(collision.gameObject);
+			isKeyPresent = true;
+		}
 	}
 
 	private void HorizontalCharacterMovement(float _horizontalInput)
