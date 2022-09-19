@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
 	bool isJumping;
 	Rigidbody2D playerRigidBody;
 
+	private void Awake()
+	{
+		this.gameObject.SetActive(true);
+	}
+
 	private void Start()
 	{
 		playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
@@ -21,7 +26,7 @@ public class PlayerController : MonoBehaviour
 	{
 		horizontalInput = Input.GetAxis("Horizontal");
 
-		if (Input.GetKeyDown(KeyCode.Space) && groundCheck.isGrounded == true)
+		if (Input.GetKey(KeyCode.Space) && groundCheck.isGrounded == true)
 			isJumping = true;
 		else
 			isJumping = false;
@@ -36,7 +41,16 @@ public class PlayerController : MonoBehaviour
 
 	private void HorizontalCharacterMovement(float _horizontalInput)
 	{
-		playerRigidBody.velocity = new Vector2(speed * _horizontalInput, playerRigidBody.velocity.y);
+		float tempSpeed;
+		if(horizontalInput == 0)
+		{ 
+			tempSpeed = 0;
+		}
+		else
+		{
+			tempSpeed = speed;
+		}
+		playerRigidBody.velocity = new Vector2(tempSpeed * _horizontalInput, playerRigidBody.velocity.y);
 	}
 
 	private void PlayerJump()
