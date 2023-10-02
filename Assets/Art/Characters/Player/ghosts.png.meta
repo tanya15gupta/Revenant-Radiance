@@ -291,7 +291,7 @@ TextureImporter:
       213: -4823225097999809296
     second: ghosts_95
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -308,10 +308,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -350,6 +352,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -361,6 +365,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -373,6 +378,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -385,6 +391,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -397,6 +404,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2428,9 +2449,105 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      ghosts_0: 5848339510805600233
+      ghosts_1: -1727838188021290389
+      ghosts_10: -4047701902620161014
+      ghosts_11: -8289762934768535054
+      ghosts_12: 5672076821484654398
+      ghosts_13: 7808182625356647359
+      ghosts_14: -5579914924139028672
+      ghosts_15: 8407298868384197589
+      ghosts_16: -90307395815542758
+      ghosts_17: -719977631598175277
+      ghosts_18: -564564982669382280
+      ghosts_19: -395713663791736896
+      ghosts_2: 692866756270868538
+      ghosts_20: 5911729759277219680
+      ghosts_21: 2963224765663376862
+      ghosts_22: 4448214051154649764
+      ghosts_23: 5414520484915571003
+      ghosts_24: -2838173514419787688
+      ghosts_25: 6909321897545372611
+      ghosts_26: 3371756183752568003
+      ghosts_27: 5101232977003527397
+      ghosts_28: -3277222477561676314
+      ghosts_29: -5720810612560853264
+      ghosts_3: 293313470881761795
+      ghosts_30: -2801015695994076346
+      ghosts_31: -7092038193236960999
+      ghosts_32: 5245580860220341527
+      ghosts_33: 2080513930897846960
+      ghosts_34: -6491767714558129590
+      ghosts_35: 409569384513381567
+      ghosts_36: -4155962305038797687
+      ghosts_37: 6020797555199147428
+      ghosts_38: -76899417274825290
+      ghosts_39: 5577045831293922432
+      ghosts_4: 1314329469083280171
+      ghosts_40: 5921715440592726657
+      ghosts_41: -3471898596817489849
+      ghosts_42: 656277044584261391
+      ghosts_43: -6527753137557005445
+      ghosts_44: -217201145480724171
+      ghosts_45: 3614896077048585706
+      ghosts_46: -2008779698062386236
+      ghosts_47: -5458852529623222076
+      ghosts_48: 6222445892989063008
+      ghosts_49: 6020009153951667103
+      ghosts_5: -1970996862446978161
+      ghosts_50: -5695960858881186313
+      ghosts_51: -262633978399476137
+      ghosts_52: -7269713129758810119
+      ghosts_53: -397991342304896364
+      ghosts_54: -7221529769748955515
+      ghosts_55: 5406346010581658576
+      ghosts_56: -6733201619012214025
+      ghosts_57: 4369567211800278810
+      ghosts_58: -7473203754858654519
+      ghosts_59: -201248218988278222
+      ghosts_6: 807464029892389407
+      ghosts_60: 4372626562848926515
+      ghosts_61: 5902415208215027434
+      ghosts_62: 3692582595376310930
+      ghosts_63: 7194182401599793361
+      ghosts_64: -8922623515399602395
+      ghosts_65: 6987114196412657701
+      ghosts_66: 6166760176980112076
+      ghosts_67: 6794878396199265082
+      ghosts_68: 3295671931764735297
+      ghosts_69: 4149681981687827001
+      ghosts_7: -4957076146848157745
+      ghosts_70: -7571576462132954528
+      ghosts_71: 1991150431568457034
+      ghosts_72: 7949722069319334603
+      ghosts_73: 6940402731200603916
+      ghosts_74: -4820196135543813883
+      ghosts_75: 8845604519205387313
+      ghosts_76: 5526941042023557897
+      ghosts_77: 7464993869204802748
+      ghosts_78: 1518020891086977850
+      ghosts_79: -1234884098476209512
+      ghosts_8: -3138011342259604648
+      ghosts_80: -1877377247981912208
+      ghosts_81: -4396037641285238672
+      ghosts_82: -2048414221443687301
+      ghosts_83: -3276656898617428100
+      ghosts_84: 8322794913432137781
+      ghosts_85: -3387155668225059933
+      ghosts_86: -382705148892935488
+      ghosts_87: -5092075843587178857
+      ghosts_88: -4626644490180395170
+      ghosts_89: -6573109566412793235
+      ghosts_9: -5136770866457286510
+      ghosts_90: 6002870160965342360
+      ghosts_91: -7404809816772429982
+      ghosts_92: 6115714576714800550
+      ghosts_93: 4548135766672099652
+      ghosts_94: -8575819816434301772
+      ghosts_95: -4823225097999809296
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
