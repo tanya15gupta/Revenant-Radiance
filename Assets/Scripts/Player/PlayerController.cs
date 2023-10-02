@@ -8,9 +8,15 @@ public class PlayerController : MonoBehaviour
 	float horizontalInput;
 
 	public PlayerGroundCheck groundCheck;
-
+	public bool isKeyPresent;
 	bool isJumping;
 	Rigidbody2D playerRigidBody;
+
+	private void Awake()
+	{
+		isKeyPresent = false;
+		this.gameObject.SetActive(true);
+	}
 
 	private void Start()
 	{
@@ -21,7 +27,7 @@ public class PlayerController : MonoBehaviour
 	{
 		horizontalInput = Input.GetAxis("Horizontal");
 
-		if (Input.GetKeyDown(KeyCode.Space) && groundCheck.isGrounded == true)
+		if (Input.GetKey(KeyCode.Space) && groundCheck.isGrounded == true)
 			isJumping = true;
 		else
 			isJumping = false;
@@ -34,9 +40,27 @@ public class PlayerController : MonoBehaviour
 		PlayerJump();
 	}
 
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if(collision.gameObject.CompareTag("Key"))
+		{
+			Destroy(collision.gameObject);
+			isKeyPresent = true;
+		}
+	}
+
 	private void HorizontalCharacterMovement(float _horizontalInput)
 	{
-		playerRigidBody.velocity = new Vector2(speed * _horizontalInput, playerRigidBody.velocity.y);
+		float tempSpeed;
+		if(horizontalInput == 0)
+		{ 
+			tempSpeed = 0;
+		}
+		else
+		{
+			tempSpeed = speed;
+		}
+		playerRigidBody.velocity = new Vector2(tempSpeed * _horizontalInput, playerRigidBody.velocity.y);
 	}
 
 	private void PlayerJump()
