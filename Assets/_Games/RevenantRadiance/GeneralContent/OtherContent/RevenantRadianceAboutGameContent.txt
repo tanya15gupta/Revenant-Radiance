@@ -1,0 +1,15 @@
+GameName (Max 30 char):
+
+Subtitle (Max 30 char):
+
+Category:
+
+Description (200-400 char):
+
+Promotional Text (170 char):
+
+Keywords (100 characters total):
+
+What’s New (Max 100 chars):
+
+Localization Available:
