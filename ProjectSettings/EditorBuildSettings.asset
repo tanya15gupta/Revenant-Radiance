@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Old/Scenes/Old/MainMenu.unity
-    guid: 6b04147b355c77f44826781f0518f603
+    path: Assets/_Games/RevenantRadiance/CoreAssets/Scenes/Core/MainMenu.unity
+    guid: cc21b3e2b49724eab985c440c76fe214
   - enabled: 1
-    path: Assets/Old/Scenes/Old/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/_Games/RevenantRadiance/CoreAssets/Scenes/Core/Loader.unity
+    guid: 73257848301c44c069f42746668e1810
+  - enabled: 1
+    path: Assets/_Games/RevenantRadiance/CoreAssets/Scenes/Core/GameBase.unity
+    guid: 8cfa4b8471de14dd5842c4eb2a633c3f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c8581a6572a834a53bde74cd328e7897, type: 2}

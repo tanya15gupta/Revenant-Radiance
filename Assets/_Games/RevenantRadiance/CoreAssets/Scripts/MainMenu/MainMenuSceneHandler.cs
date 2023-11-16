@@ -22,7 +22,7 @@ namespace RevenantRadiance.Core
                 .Append(preInitUI.DOFade(0, 2.1f))
                 .InsertCallback(2,() =>
                 {
-                    if (GameStateHandler.Instance.GameState == GameStates.Game)
+                    if (GameStateHandler.Instance.GameState == GameStates.Loading)
                     {
                         SetupMainMenu();
                     }

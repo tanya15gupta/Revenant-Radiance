@@ -20,7 +20,7 @@ namespace RevenantRadiance
             splashUI.alpha = 0;
         }
 
-        public override void Initialize()
+        public override void Initialize(params object[] stateParams)
         {
             GameStateHandler.Instance.RequestStateChange(this);
         }

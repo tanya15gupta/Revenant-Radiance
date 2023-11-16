@@ -6,6 +6,7 @@ using RevenantRadiance.Core.UI;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace RevenantRadiance.Core
 {
@@ -29,7 +30,7 @@ namespace RevenantRadiance.Core
             // GameUtilities.ToggleCursorStatus(true);
         }
 
-        public override void Initialize()
+        public override void Initialize(params object[] stateParams)
         {
             mainMenuCanvas.DOFade(1,2f);
             GameStateHandler.Instance.RequestStateChange(this);
@@ -40,6 +41,14 @@ namespace RevenantRadiance.Core
             StartCoroutine(EnterStateRoutine());
         }
 
+        public override void ExitState()
+        {
+            InputProvider.Input.Menu.RemoveCallbacks(this);
+            InputProvider.Input.Menu.Disable();
+            SceneManager.UnloadSceneAsync(GameStateHandler.MAIN_MENU_SCENE);
+        }
+        
+        
         private IEnumerator EnterStateRoutine()
         {
             menuUI.Initialize(this);
@@ -57,12 +66,6 @@ namespace RevenantRadiance.Core
             InputProvider.Input.Menu.Enable();
             SwitchMenu(menuUI);
         }
-
-        public override void ExitState()
-        {
-            InputProvider.Input.Menu.RemoveCallbacks(this);
-            InputProvider.Input.Menu.Disable();
-        }
         
         private void SwitchMenu(IMainMenuUI menu)
         {
@@ -76,7 +79,8 @@ namespace RevenantRadiance.Core
         }
 
         
-
+        
+        #region Control Points
         void IMainMenu.LoadMainMenu()
         {
             SwitchMenu(menuUI);
@@ -84,7 +88,9 @@ namespace RevenantRadiance.Core
 
         void IMainMenu.LoadSelectGamePanel()
         {
-            SwitchMenu(gameSelectorPanel);
+            GameStateHandler.Instance.LoadGame();
+            // SwitchMenu(gameSelectorPanel);
+            
         }
 
         void IMainMenu.LoadOptionsPanel()
@@ -96,8 +102,7 @@ namespace RevenantRadiance.Core
         {
             GameConfig.Instance.ExitGame();
         }
-
-
+        #endregion
 
         #region Input
 

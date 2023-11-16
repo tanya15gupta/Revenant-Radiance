@@ -29,7 +29,7 @@ namespace RevenantRadiance.Core
     {
         public virtual GameStates Type { get; protected set; }
 
-        public virtual void Initialize() { }
+        public virtual void Initialize(params object[] stateParams) { }
         
         public virtual void EnterState() { }
 
